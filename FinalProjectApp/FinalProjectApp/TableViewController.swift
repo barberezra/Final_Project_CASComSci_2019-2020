@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController, URLSessionDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +24,7 @@ class TableViewController: UITableViewController {
 
       override func viewDidLoad() {
         super.viewDidLoad()
-        
-        NetworkManager().fetchFilms { [weak self] (films) in
+        URLSessionDelegate().fetchFilms { [weak self] (films) in
           self?.films = films
           DispatchQueue.main.async {
             self?.tableView.reloadData()

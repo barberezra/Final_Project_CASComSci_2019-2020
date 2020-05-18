@@ -8,3 +8,4 @@ But now since I know how to make web requests, I can move forward with the proje
 
 The original goal of the project was to search a Harry Potter API. 
 I simplified it for the milestone because I had no idea how to search it.
+But now I am ready to use a database API and use the search function.

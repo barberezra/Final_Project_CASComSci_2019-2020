@@ -16,8 +16,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let name: String
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        //textField code
+        textField.resignFirstResponder()  //if desired
+        grab()
+        return true
+    }
     
-    @IBAction func grab() {
+    
+    func grab() {
         let inputNum = textField.text!
         let apiURL = URL(string: "https://swapi.dev/api/planets/\(inputNum)/")!
         let task = URLSession.shared.dataTask(with: apiURL) { (data, response, error) in

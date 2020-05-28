@@ -1,12 +1,14 @@
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var labelView: UILabel!
     @IBOutlet weak var findButton: UIButton!
+    @IBOutlet weak var textField: UITextField!
+    var inputNum: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        textField.delegate = self
         
     }
     
@@ -14,18 +16,19 @@ class ViewController: UIViewController {
         let name: String
     }
     
+    
     @IBAction func grab() {
-        let apiURL = URL(string: "https://swapi.dev/api/planets/12/")!
+        let inputNum = textField.text!
+        let apiURL = URL(string: "https://swapi.dev/api/planets/\(inputNum)/")!
         let task = URLSession.shared.dataTask(with: apiURL) { (data, response, error) in
             if let data = data {
                 do { let dictionary = try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed)
                     print(dictionary)
                     let res = try JSONDecoder().decode(Response.self, from: data)
-                    let name = res.name
                     DispatchQueue.main.async() {
-                    self.labelView.text = String(res.name)
+                        self.labelView.text = String(res.name)
                     }
-            }
+                }
                 catch {
                     print("This errored out for some reason :(")
                 }

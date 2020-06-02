@@ -9,3 +9,5 @@ This is the tutorial for the snake app. I took the movement mechanics and worked
 ### API tutorial
 [Link](https://medium.com/better-programming/basic-api-request-with-swift-4-d8bf829524f)
 This tutorial helped me with API calls a lot
+[Link](https://www.freecodecamp.org/news/how-to-make-your-first-api-call-in-swift/)
+This other tutorial helped me start out with API calls

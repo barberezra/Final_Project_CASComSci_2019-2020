@@ -15,32 +15,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AV7-U5-9Jk">
-                                <rect key="frame" x="0.0" y="357" width="404" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AV7-U5-9Jk">
+                                <rect key="frame" x="0.0" y="293" width="414" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Planet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbc-Ne-1mD">
-                                <rect key="frame" x="5" y="125" width="404" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Climate" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujh-A5-F0r">
+                                <rect key="frame" x="0.0" y="462" width="414" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gravity" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2B-MZ-4IT">
+                                <rect key="frame" x="0.0" y="626" width="414" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Climate" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujh-A5-F0r">
-                                <rect key="frame" x="77" y="482" width="250" height="222"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbc-Ne-1mD">
+                                <rect key="frame" x="0.0" y="152" width="414" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ujh-A5-F0r" firstAttribute="width" secondItem="fbc-Ne-1mD" secondAttribute="width" id="0Bw-tO-GTg"/>
+                            <constraint firstItem="fbc-Ne-1mD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="108" id="9sO-ve-4gN"/>
+                            <constraint firstItem="AV7-U5-9Jk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9vi-X5-FzH"/>
+                            <constraint firstItem="AV7-U5-9Jk" firstAttribute="width" secondItem="fbc-Ne-1mD" secondAttribute="width" id="M6p-DA-7dp"/>
+                            <constraint firstItem="fbc-Ne-1mD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="R4L-YC-uDN"/>
+                            <constraint firstItem="ujh-A5-F0r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ug5-7G-9Ay"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ujh-A5-F0r" secondAttribute="trailing" id="bBJ-7n-q1A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fbc-Ne-1mD" secondAttribute="trailing" id="pR4-gm-AFJ"/>
+                            <constraint firstItem="ujh-A5-F0r" firstAttribute="top" secondItem="AV7-U5-9Jk" secondAttribute="bottom" constant="135" id="txy-RM-ojC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AV7-U5-9Jk" secondAttribute="trailing" id="yRm-Ix-DAw"/>
+                            <constraint firstItem="AV7-U5-9Jk" firstAttribute="top" secondItem="fbc-Ne-1mD" secondAttribute="bottom" constant="99" id="yos-OY-9lE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="climateLabel" destination="ujh-A5-F0r" id="jYg-Vr-7At"/>
+                        <outlet property="gravityLabel" destination="A2B-MZ-4IT" id="5ts-OO-j1I"/>
                         <outlet property="labelView" destination="fbc-Ne-1mD" id="Zud-R7-Dan"/>
                         <outlet property="textField" destination="AV7-U5-9Jk" id="ZLQ-Wx-621"/>
                     </connections>
